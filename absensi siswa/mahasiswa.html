@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="mahasiswa-auth.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>DASHBOARD MAHASISWA</h1>
+        <p>Sistem Absensi Berbasis QR Code</p>
+        <button onclick="logoutMahasiswa()">Logout</button>
+    </header>
+
+    <div class="card">
+        <h2>QR Code Absensi Saya</h2>
+
+        <p>
+            Tunjukkan QR Code ini kepada petugas
+            untuk melakukan absensi.
+        </p>
+
+        <div id="qrCode" style="display:flex;
+                justify-content:center;
+                align-items:center;
+                padding:20px;">
+        </div>
+
+        <p id="statusQR" style="text-align:center;">
+            QR Code sedang dibuat...
+        </p>
+    </div>
+
+    <!-- Library pembuat QR Code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <script src="mahasiswa.js"></script>
+    <section class="panel">
+
+        <!-- DATA MAHASISWA -->
+        <div class="card">
+            <h2>Data Mahasiswa</h2>
+
+            <p>Nama:
+                <strong id="namaMhs">-</strong>
+            </p>
+
+            <p>NIM:
+                <strong id="nimMhs">-</strong>
+            </p>
+
+            <p>Program Studi:
+                <strong id="prodiMhs">-</strong>
+            </p>
+        </div>
+    </section>
+
+    <section class="panel">
+        <h2>Riwayat Kehadiran</h2>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tanggal</th>
+                        <th>Jam</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="riwayatSaya"></tbody>
+            </table>
+        </div>
+    </section>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Sistem Absensi Mahasiswa</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <script src="mahasiswa-auth.js"></script>
+    <script src="mahasiswa.js"></script>
+</body>
+
+</html>

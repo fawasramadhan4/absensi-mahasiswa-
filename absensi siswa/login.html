@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Admin - Absensi Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<p>Mahasiswa?</p>
+
+<a href="mahasiswa-login.html">
+    Login sebagai Mahasiswa
+</a>
+
+<body class="login-body">
+
+    <div class="login-container">
+        <div class="login-logo">
+            <img src="logo-unisa.png" alt="logo universitas alkhairaat">
+        </div>
+        <h2>LOGIN ADMIN</h2>
+        <p>Sistem Absensi Mahasiswa QR Code</p>
+
+        <form id="loginForm">
+            <label>Username</label>
+            <input type="text" id="username" placeholder="Masukkan username" value="" autocomplete="off" required>
+
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Masukkan password" value="" autocomplete="new-password"
+                required>
+            <button type="submit">MASUK</button>
+
+            <p id="pesanLogin"></p>
+        </form>
+
+        <small>© 2026 Absensi Mahasiswa</small>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>

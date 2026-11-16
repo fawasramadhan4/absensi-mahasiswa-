@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-body">
+    <p>Admin?</p>
+
+    <a href="login.html">
+        Login sebagai Admin
+    </a>
+    <div class="login-container">
+        <div class="login-logo">🎓</div>
+
+        <h2>LOGIN MAHASISWA</h2>
+        <p>Sistem Absensi Mahasiswa QR Code</p>
+
+        <form id="mahasiswaLoginForm">
+            <label>Nomor Induk Mahasiswa (NIM)</label>
+            <input type="text" id="nim" placeholder="Masukkan NIM" value="" autocomplete="off" required>
+
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Masukkan password" value="" autocomplete="new-password"
+                required>
+
+            <button type="submit">MASUK</button>
+
+            <p id="pesanLogin"></p>
+        </form>
+
+        <small>© 2026 Absensi Mahasiswa</small>
+    </div>
+
+    <script src="mahasiswa-login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absensi Mahasiswa QR Code</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Library QR Code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script src="auth.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>ABSENSI MAHASISWA</h1>
+        <p>Sistem Informasi Absensi Berbasis QR Code</p>
+        <button onclick="logout()">Logout</button>
+    </header>
+
+    <div class="container">
+
+        <section class="dashboard">
+            <div class="card">
+                <h3>Total Mahasiswa</h3>
+                <h2 id="totalMahasiswa">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Jumlah Hadir Hari Ini</h3>
+                <h2 id="totalHadir">0</h2>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Tambah Mahasiswa</h2>
+
+            <label>Nama Mahasiswa</label>
+            <input type="text" id="nama" placeholder="Masukkan nama mahasiswa">
+
+            <label>Nomor Induk Mahasiswa (NIM)</label>
+            <input type="text" id="nim" placeholder="Masukkan NIM">
+
+            <label>Program Studi</label>
+            <input type="text" id="prodi" placeholder="Masukkan program studi">
+
+            <!-- Kolom password terpisah -->
+            <label>Password Mahasiswa</label>
+            <input type="password" id="passwordMahasiswa" placeholder="Buat password mahasiswa">
+
+            <!-- Tombol tambah mahasiswa -->
+            <button type="button" id="tambahBtn">
+                ＋ Tambah Mahasiswa
+            </button>
+
+        </section>
+
+        <section class="panel">
+            <h2>Daftar Mahasiswa dan QR Code</h2>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>NIM</th>
+                            <th>Program Studi</th>
+                            <th>QR Code</th>
+                        </tr>
+                    </thead>
+                    <tbody id="daftarMahasiswa"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Scan QR Code Absensi</h2>
+
+            <p>Arahkan kamera ke QR Code mahasiswa.</p>
+
+            <div id="reader"></div>
+
+            <button onclick="mulaiScan()">
+                Mulai Scan
+            </button>
+
+            <button onclick="berhentiScan()">
+                Berhenti Scan
+            </button>
+        </section>
+
+        <section class="panel">
+            <h2>Riwayat Absensi</h2>
+
+            <button onclick="exportCSV()">Download Laporan CSV</button>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>NIM</th>
+                            <th>Tanggal</th>
+                            <th>Jam</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="riwayatAbsensi"></tbody>
+                </table>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Sistem Absensi Mahasiswa QR Code</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
